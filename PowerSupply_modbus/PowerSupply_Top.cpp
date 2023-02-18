@@ -8,7 +8,7 @@
 #include <chrono>
 #include <mutex>
 extern "C" {
-#include <modbus.h>
+#include "../PowerSupply_modbus/libmodbus/modbus.h"
 }
 
 #define SOMAXCONN       0x7fffffff

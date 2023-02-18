@@ -18,7 +18,7 @@
 #include <unistd.h>
 #endif
 
-#include <config.h>
+#include "../libmodbus/config.h"
 
 #include "modbus-private.h"
 #include "modbus.h"
