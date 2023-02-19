@@ -22,7 +22,7 @@
 #  include <arpa/inet.h>
 #endif
 
-#include <config.h>
+#include "../libmodbus/config.h"
 
 #include "modbus.h"
 
