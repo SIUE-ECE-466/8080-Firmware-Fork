@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,7 +113,7 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,6 +138,7 @@
     <ClCompile Include="libmodbus\modbus-tcp.c" />
     <ClCompile Include="libmodbus\modbus.c" />
     <ClCompile Include="PowerSupply_Top.cpp" />
+    <ClCompile Include="Registers_Handler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libmodbus\config.h" />
@@ -148,9 +149,8 @@
     <ClInclude Include="libmodbus\modbus-tcp.h" />
     <ClInclude Include="libmodbus\modbus-version.h" />
     <ClInclude Include="libmodbus\modbus.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="modbus.rc" />
+    <ClInclude Include="Registers.h" />
+    <ClInclude Include="Register_map.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

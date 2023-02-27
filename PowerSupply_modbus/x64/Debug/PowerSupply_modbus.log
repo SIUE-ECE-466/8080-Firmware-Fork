@@ -1,21 +1,3 @@
 ﻿  PowerSupply_Top.cpp
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,48): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,79): warning C4305: 'initializing': truncation from 'int' to 'uint8_t'
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,48): warning C4309: 'initializing': truncation of constant value
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,55): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,55): warning C4309: 'initializing': truncation of constant value
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,62): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(23,62): warning C4309: 'initializing': truncation of constant value
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(114): warning C4715: 'communication': not all control paths return a value
-     Creating library C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.lib and object C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exp
-LINK : warning LNK4217: symbol 'modbus_free' defined in 'modbus.obj' is imported by 'modbus-rtu.obj' in function 'modbus_new_rtu'
-LINK : warning LNK4217: symbol 'modbus_free' defined in 'modbus.obj' is imported by 'modbus-tcp.obj' in function '_modbus_tcp_pi_connect'
-LINK : warning LNK4286: symbol 'modbus_free' defined in 'modbus.obj' is imported by 'PowerSupply_Top.obj'
-LINK : warning LNK4217: symbol 'modbus_set_bits_from_bytes' defined in 'modbus-data.obj' is imported by 'modbus.obj' in function 'modbus_reply'
-LINK : warning LNK4217: symbol 'modbus_strerror' defined in 'modbus.obj' is imported by 'PowerSupply_Top.obj' in function 'main'
-LINK : warning LNK4217: symbol 'modbus_receive' defined in 'modbus.obj' is imported by 'PowerSupply_Top.obj' in function '"int __cdecl communication(void)" (?communication@@YAHXZ)'
-LINK : warning LNK4217: symbol 'send_msg' defined in 'modbus.obj' is imported by 'PowerSupply_Top.obj' in function '"int __cdecl communication(void)" (?communication@@YAHXZ)'
-LINK : warning LNK4217: symbol 'modbus_new_tcp' defined in 'modbus-tcp.obj' is imported by 'PowerSupply_Top.obj' in function 'main'
-LINK : warning LNK4217: symbol 'modbus_tcp_listen' defined in 'modbus-tcp.obj' is imported by 'PowerSupply_Top.obj' in function 'main'
-LINK : warning LNK4217: symbol 'modbus_tcp_accept' defined in 'modbus-tcp.obj' is imported by 'PowerSupply_Top.obj' in function 'main'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(121): warning C4715: 'communication': not all control paths return a value
   PowerSupply_modbus.vcxproj -> C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exe
