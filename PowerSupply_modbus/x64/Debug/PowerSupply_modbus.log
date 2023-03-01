@@ -1,3 +1,1 @@
-﻿  PowerSupply_Top.cpp
-C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(121): warning C4715: 'communication': not all control paths return a value
-  PowerSupply_modbus.vcxproj -> C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exe
+﻿  PowerSupply_modbus.vcxproj -> C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exe

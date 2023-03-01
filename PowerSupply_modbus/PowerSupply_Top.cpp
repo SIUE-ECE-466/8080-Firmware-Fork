@@ -96,8 +96,17 @@ int communication()
 				printf("msg[%d] : %d\n", i, recvbuf[i]);
 			}
 
+			uint16_t addr = ((recvbuf[8] << 8) | recvbuf[9]);
+			uint16_t count = ((recvbuf[10] << 8) | recvbuf[11]);
+			uint16_t bytes_sent = ((count * 2) + 10);
+
+			recvbuf[8] = count * 2;
+			recvbuf[5] = bytes_sent;
+			recvbuf[4] = bytes_sent >> 8; 
+
+			printf("                          Addr : %d Count : %d\n", addr, count);
 			// Echo the buffer back to the sender
-			iSendResult = send_msg(mb, &recvbuf[0], iResult);
+			iSendResult = send_msg(mb, &recvbuf[0], bytes_sent);
 			if (iSendResult == SOCKET_ERROR) {
 				printf("send failed with error: %d\n", WSAGetLastError());
 				closesocket(ClientSocket);
