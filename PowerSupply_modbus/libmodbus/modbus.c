@@ -801,6 +801,8 @@ int modbus_reply(modbus_t *ctx,
     sft.function = function;
     sft.t_id = ctx->backend->prepare_response_tid(req, &req_length);
 
+   // printf("start_register : %d nb_registers : %d\n", mb_mapping->start_registers, mb_mapping->nb_registers);
+    //printf("slave : %d function : %d address : %d\n", slave, function, address);
     /* Data are flushed on illegal number of values errors. */
     switch (function) {
     case MODBUS_FC_READ_COILS:
@@ -1134,6 +1136,8 @@ int modbus_reply(modbus_t *ctx,
         !(ctx->quirks & MODBUS_QUIRK_REPLY_TO_BROADCAST)) {
         return 0;
     }
+
+    for (int i = 0; i < rsp_length; i++) printf("rsp[%d] : %d\n", i, rsp[i]);
     return send_msg(ctx, rsp, rsp_length);
 }
 
@@ -1701,7 +1705,7 @@ void _modbus_init_common(modbus_t *ctx)
     ctx->slave = -1;
     ctx->s = -1;
 
-    ctx->debug = FALSE;
+    ctx->debug = TRUE;
     ctx->error_recovery = MODBUS_ERROR_RECOVERY_NONE;
     ctx->quirks = MODBUS_QUIRK_NONE;
 
@@ -2067,4 +2071,5 @@ size_t strlcpy(char *dest, const char *src, size_t dest_size)
 
     return (s - src - 1); /* count does not include NUL */
 }
+
 #endif

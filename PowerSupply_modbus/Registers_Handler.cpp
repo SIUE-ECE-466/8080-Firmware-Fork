@@ -12,8 +12,8 @@ using namespace std;
 
 int Estimator()
 {
-	float ii[100] = {0}, ih[100] = {0}, mi, Ra, Rb, Rc, Rd, Pa, Pb, Pc, Pd;
-	float vv[100] = {0}, dvv[100] = {0}, dih[100] = {0}, HZ = 2, mv;
+	float ii[100] = {1}, ih[100] = {1}, mi, Ra, Rb, Rc, Rd, Pa, Pb, Pc, Pd;
+	float vv[100] = {1}, dvv[100] = {1}, dih[100] = {1}, HZ = 2, mv;
 	float Aa, Ab, Ac, Ad, lb, mh, deti, discr;
 	int i, NHIS = 99, NCOV = 99, NPRO = 99;
 

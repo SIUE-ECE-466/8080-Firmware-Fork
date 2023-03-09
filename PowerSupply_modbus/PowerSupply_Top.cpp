@@ -20,8 +20,10 @@ extern "C" {
 #define DEFAULT_BUFLEN 256
 #define My_slave_id 2
 
+int registermap(uint16_t* registers, modbus_mapping_t* registerMap, uint8_t* recvbuf);
 extern int Estimator();
 int communication();
+
 
 using namespace std;
 
@@ -32,9 +34,12 @@ int ListenSocket = -1;
 int ClientSocket = -1;
 int iResult = 0;
 int iSendResult = 0;
+int Status = -1;
 
 uint8_t recvbuf[DEFAULT_BUFLEN] = { 0 };
 int recvbuflen = DEFAULT_BUFLEN;
+
+modbus_mapping_t registerMap;
 
 int main()
 {
@@ -48,6 +53,10 @@ int main()
 		fprintf(stderr, "unable to allocate libmodbus context\n");
 		return -1;
 	}
+	
+	/*set slave ID*/
+	Status = modbus_set_slave(mb, My_slave_id);
+	if (Status == -1) printf("Invalid slave id");
 
 	/* Listen for Modbus TCP master/client connection request*/
 	ListenSocket = modbus_tcp_listen(mb, SOMAXCONN);
@@ -73,7 +82,9 @@ int main()
 	/* Close the Socket after accepting connection*/
 	closesocket(ListenSocket);
 
+	/*communicatioln thread*/
 	thread t1(communication);
+	/*Estimator thread*/
 	thread t2(Estimator);
 
 	t1.join();
@@ -93,20 +104,14 @@ int communication()
 			printf("Bytes received: %d\n", iResult);
 
 			for (int i = 0; i < iResult; i++) {
-				printf("msg[%d] : %d\n", i, recvbuf[i]);
+				printf("msg[%d] : %X\n", i, recvbuf[i]);
 			}
 
-			uint16_t addr = ((recvbuf[8] << 8) | recvbuf[9]);
-			uint16_t count = ((recvbuf[10] << 8) | recvbuf[11]);
-			uint16_t bytes_sent = ((count * 2) + 10);
+			/*Register the map address*/
+			registermap(Register_Base, &registerMap, recvbuf);
 
-			recvbuf[8] = count * 2;
-			recvbuf[5] = bytes_sent;
-			recvbuf[4] = bytes_sent >> 8; 
-
-			printf("                          Addr : %d Count : %d\n", addr, count);
-			// Echo the buffer back to the sender
-			iSendResult = send_msg(mb, &recvbuf[0], bytes_sent);
+			// reply modbus response
+			iSendResult = modbus_reply(mb, recvbuf, iResult, &registerMap);
 			if (iSendResult == SOCKET_ERROR) {
 				printf("send failed with error: %d\n", WSAGetLastError());
 				closesocket(ClientSocket);
@@ -127,4 +132,13 @@ int communication()
 	} while (iResult > 0);
 
 	this_thread::sleep_for(chrono::microseconds(10000));
+}
+int registermap(uint16_t* registers, modbus_mapping_t* registerMap, uint8_t *recvbuf)
+{
+	int addr = (recvbuf[8] << 8) + recvbuf[9];
+	registerMap->start_registers = addr;
+	registerMap->nb_registers = 125;
+	registerMap->tab_registers = registers;
+
+	return 0;
 }
