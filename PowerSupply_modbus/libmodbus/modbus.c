@@ -801,8 +801,6 @@ int modbus_reply(modbus_t *ctx,
     sft.function = function;
     sft.t_id = ctx->backend->prepare_response_tid(req, &req_length);
 
-   // printf("start_register : %d nb_registers : %d\n", mb_mapping->start_registers, mb_mapping->nb_registers);
-    //printf("slave : %d function : %d address : %d\n", slave, function, address);
     /* Data are flushed on illegal number of values errors. */
     switch (function) {
     case MODBUS_FC_READ_COILS:
@@ -981,7 +979,7 @@ int modbus_reply(modbus_t *ctx,
     case MODBUS_FC_WRITE_MULTIPLE_REGISTERS: {
         int nb = (req[offset + 3] << 8) + req[offset + 4];
         int nb_bytes = req[offset + 5];
-        int mapping_address = address - mb_mapping->start_registers;
+        int mapping_address = address - 0;
 
         if (nb < 1 || MODBUS_MAX_WRITE_REGISTERS < nb || nb_bytes != nb * 2) {
             rsp_length = response_exception(
@@ -1005,16 +1003,18 @@ int modbus_reply(modbus_t *ctx,
                                    mapping_address < 0 ? address : address + nb);
         } else {
             int i, j;
-            for (i = mapping_address, j = 6; i < mapping_address + nb; i++, j += 2) {
+            for (i = mapping_address, j = 6; i < mapping_address + nb_bytes; i += 2, j += 2) {
                 /* 6 and 7 = first value */
-                mb_mapping->tab_registers[i] =
-                    (req[offset + j] << 8) + req[offset + j + 1];
+                mb_mapping->tab_registers[i + 1] = req[offset + j];
+                mb_mapping->tab_registers[i + 0] =  req[offset + j + 1];
             }
 
             rsp_length = ctx->backend->build_response_basis(&sft, rsp);
             /* 4 to copy the address (2) and the no. of registers */
             memcpy(rsp + rsp_length, req + rsp_length, 4);
             rsp_length += 4;
+            rsp[4] = 0;
+            rsp[5] = 6;
         }
     } break;
     case MODBUS_FC_REPORT_SLAVE_ID: {
