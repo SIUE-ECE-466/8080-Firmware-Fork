@@ -1,1 +1,102 @@
-﻿  PowerSupply_modbus.vcxproj -> C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exe
+﻿  modbus.c
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(44,13): warning C4273: 'modbus_strerror': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(218,24): message : see previous definition of 'modbus_strerror'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(111,5): warning C4273: 'modbus_flush': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(215,16): message : see previous definition of 'modbus_flush'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(165,6): warning C4273: 'send_msg': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(273,16): message : see previous definition of 'send_msg'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(223,5): warning C4273: 'modbus_send_raw_request': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(258,1): message : see previous definition of 'modbus_send_raw_request'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(525,5): warning C4273: 'modbus_receive': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(260,16): message : see previous definition of 'modbus_receive'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(543,5): warning C4273: 'modbus_receive_confirmation': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(262,16): message : see previous definition of 'modbus_receive_confirmation'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(777,5): warning C4273: 'modbus_reply': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(264,16): message : see previous definition of 'modbus_reply'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1031,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1061,58): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1117,70): warning C4333: '>>': right shift by too large amount, data loss
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1145,5): warning C4273: 'modbus_reply_exception': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(269,1): message : see previous definition of 'modbus_reply_exception'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1223,5): warning C4273: 'modbus_read_bits': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(220,16): message : see previous definition of 'modbus_read_bits'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1252,5): warning C4273: 'modbus_read_input_bits': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(221,16): message : see previous definition of 'modbus_read_input_bits'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1327,5): warning C4273: 'modbus_read_registers': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(222,16): message : see previous definition of 'modbus_read_registers'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1352,5): warning C4273: 'modbus_read_input_registers': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(224,1): message : see previous definition of 'modbus_read_input_registers'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1406,5): warning C4273: 'modbus_write_bit': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(225,16): message : see previous definition of 'modbus_write_bit'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1417,5): warning C4273: 'modbus_write_register': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(226,16): message : see previous definition of 'modbus_write_register'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1428,5): warning C4273: 'modbus_write_bits': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(227,16): message : see previous definition of 'modbus_write_bits'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1491,5): warning C4273: 'modbus_write_registers': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(229,1): message : see previous definition of 'modbus_write_registers'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1539,5): warning C4273: 'modbus_mask_write_register': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(231,1): message : see previous definition of 'modbus_mask_write_register'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1579,5): warning C4273: 'modbus_write_and_read_registers': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(232,16): message : see previous definition of 'modbus_write_and_read_registers'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1660,5): warning C4273: 'modbus_report_slave_id': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(239,16): message : see previous definition of 'modbus_report_slave_id'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1724,5): warning C4273: 'modbus_set_slave': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(187,16): message : see previous definition of 'modbus_set_slave'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1734,5): warning C4273: 'modbus_get_slave': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(188,16): message : see previous definition of 'modbus_get_slave'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1744,5): warning C4273: 'modbus_set_error_recovery': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(189,16): message : see previous definition of 'modbus_set_error_recovery'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1757,5): warning C4273: 'modbus_set_socket': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(191,16): message : see previous definition of 'modbus_set_socket'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1768,5): warning C4273: 'modbus_get_socket': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(192,16): message : see previous definition of 'modbus_get_socket'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1779,5): warning C4273: 'modbus_get_response_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(195,1): message : see previous definition of 'modbus_get_response_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1791,5): warning C4273: 'modbus_set_response_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(197,1): message : see previous definition of 'modbus_set_response_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1804,5): warning C4273: 'modbus_get_byte_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(200,1): message : see previous definition of 'modbus_get_byte_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1816,5): warning C4273: 'modbus_set_byte_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(201,16): message : see previous definition of 'modbus_set_byte_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1830,5): warning C4273: 'modbus_get_indication_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(204,1): message : see previous definition of 'modbus_get_indication_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1842,5): warning C4273: 'modbus_set_indication_timeout': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(206,1): message : see previous definition of 'modbus_set_indication_timeout'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1855,5): warning C4273: 'modbus_get_header_length': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(208,16): message : see previous definition of 'modbus_get_header_length'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1865,5): warning C4273: 'modbus_enable_quirks': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(270,16): message : see previous definition of 'modbus_enable_quirks'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1877,5): warning C4273: 'modbus_disable_quirks': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(271,16): message : see previous definition of 'modbus_disable_quirks'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1889,5): warning C4273: 'modbus_connect': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(210,16): message : see previous definition of 'modbus_connect'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1899,6): warning C4273: 'modbus_close': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(211,17): message : see previous definition of 'modbus_close'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1907,6): warning C4273: 'modbus_free': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(213,17): message : see previous definition of 'modbus_free'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1915,5): warning C4273: 'modbus_set_debug': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(216,16): message : see previous definition of 'modbus_set_debug'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1932,19): warning C4273: 'modbus_mapping_new_start_address': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(242,1): message : see previous definition of 'modbus_mapping_new_start_address'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(1984,89): warning C4133: '=': incompatible types - from 'uint16_t *' to 'uint8_t *'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(2001,71): warning C4133: '=': incompatible types - from 'uint16_t *' to 'uint8_t *'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(2015,19): warning C4273: 'modbus_mapping_new': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(251,30): message : see previous definition of 'modbus_mapping_new'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.c(2025,6): warning C4273: 'modbus_mapping_free': inconsistent dll linkage
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\libmodbus\modbus.h(255,17): message : see previous definition of 'modbus_mapping_free'
+  PowerSupply_Top.cpp
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(61,11): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(65,11): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(66,12): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(67,12): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(69,17): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(70,13): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(71,13): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(77,16): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(85,17): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(95,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(101,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(104,27): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(105,27): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\PowerSupply_modbus\PowerSupply_Top.cpp(152): warning C4715: 'communication': not all control paths return a value
+  PowerSupply_modbus.vcxproj -> C:\Users\nshaiku\Sravan\ECE466-Sravan\PowerSupplySw\8080-Firmware-Fork\x64\Debug\PowerSupply_modbus.exe

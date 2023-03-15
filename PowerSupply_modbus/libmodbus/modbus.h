@@ -167,8 +167,8 @@ typedef struct _modbus_mapping_t {
     int start_registers;
     uint8_t *tab_bits;
     uint8_t *tab_input_bits;
-    uint16_t *tab_input_registers;
-    uint16_t *tab_registers;
+    uint8_t *tab_input_registers;
+    uint8_t *tab_registers;
 } modbus_mapping_t;
 
 typedef enum {

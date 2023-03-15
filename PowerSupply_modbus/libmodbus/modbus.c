@@ -850,14 +850,14 @@ int modbus_reply(modbus_t *ctx,
             is_input ? mb_mapping->start_input_registers : mb_mapping->start_registers;
         int nb_registers =
             is_input ? mb_mapping->nb_input_registers : mb_mapping->nb_registers;
-        uint16_t *tab_registers =
+        uint8_t *tab_registers =
             is_input ? mb_mapping->tab_input_registers : mb_mapping->tab_registers;
         const char *const name = is_input ? "read_input_registers" : "read_registers";
         int nb = (req[offset + 3] << 8) + req[offset + 4];
         /* The mapping can be shifted to reduce memory consumption and it
            doesn't always start at address zero. */
         int mapping_address = address - start_registers;
-
+        
         if (nb < 1 || MODBUS_MAX_READ_REGISTERS < nb) {
             rsp_length = response_exception(ctx,
                                             &sft,
@@ -882,9 +882,11 @@ int modbus_reply(modbus_t *ctx,
 
             rsp_length = ctx->backend->build_response_basis(&sft, rsp);
             rsp[rsp_length++] = nb << 1;
+            rsp[4] = 0; // always zero
+            rsp[5] = ((nb << 1) + 3);
             for (i = mapping_address; i < mapping_address + nb; i++) {
-                rsp[rsp_length++] = tab_registers[i] >> 8;
-                rsp[rsp_length++] = tab_registers[i] & 0xFF;
+                rsp[rsp_length++] = tab_registers[2*i+1];
+                rsp[rsp_length++] = tab_registers[2*i+0];
             }
         }
     } break;
@@ -1137,7 +1139,6 @@ int modbus_reply(modbus_t *ctx,
         return 0;
     }
 
-    for (int i = 0; i < rsp_length; i++) printf("rsp[%d] : %d\n", i, rsp[i]);
     return send_msg(ctx, rsp, rsp_length);
 }
 
